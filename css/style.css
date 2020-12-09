@@ -1,0 +1,26 @@
+body{
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-weight: bold;
+}
+h1{
+ padding: 15px;
+ font-size: 40px;
+}
+h2{
+    padding: 10px;
+    font-size: 40px;
+}
+img{
+    width: 150px;
+    height: 200px;
+}
+.star-images img{
+    border: 2px solid transparent;    
+}
+.star-images{
+    padding-top: 10px;
+}
+.first-war{
+    margin-right: 100px
+}
