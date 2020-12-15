@@ -47,7 +47,7 @@ let updateBars= function(){
     // if (vaderVote === yodaVote){
     //     vaderSaber.style.width = '50%'
     // }
-    yodaSaber.style.wdith = yodaVote/vaderVote *100 + '%'
+    yodaSaber.style.width = yodaVote/vaderVote *100 + '%'
     // if (yodaVote === vaderVote){
     //     yodaSaber.style.width = '50%'
     // }
@@ -104,55 +104,16 @@ yoda.addEventListener('click', function(){
 
 
 
-
-
-
-
-
-// let vVotes = vaderVoteSpan
-// let yVotes= yodaVoteSpan
-
-
-// let voteTotal = vVotes + yVotes;
-// let vPercent = vVotes / voteTotal
-
-// vaderBeam.style.width = 200 * percent + "px"
-
-// vVotes = parseInt()
-
-
-
-// let updateVotes = function(){
-
-//     let vPercent = vVotes / voteTotal;
-//     let yPercent = yVotes / voteTotal;
-  
-//     vaderBeam.style.width = 200 * percent + "px";
-//     yodaBeam.style.width = 200 * percent + "px";
-//   }
-
-
-//   let vaderUpdate = function(){
-//     vaderSaber.style.width = "80px"
-// }
-// vaderUpdate()
-
-
-
-
-
-
-
-
-// http://circuslabs.net:3000/data/starwars4
-// http://circuslabs.net:3000/data/starwars7
-
-
-// let vaderUrl = 'http://circuslabs.net:3000/data/vader'
-// let yodaUrl = 'http://circuslabs.net:3000/data/yoda'
-
-// const yodaVote = axios.get(yodaUrl).response.data.data.value
-// const vaderVote = axios.get(vaderUrl).response.data.data.value
+axios.post('http://circuslabs.net:3000/data/vader', {
+        type: 'number',
+        action: '=',
+        value: 0
+})
+axios.post('http://circuslabs.net:3000/data/yoda', {
+        type: 'number',
+        action: '=',
+        value: 0
+})
 
 
 
