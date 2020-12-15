@@ -3,10 +3,10 @@ console.log('hello')
 let vader = document.querySelector('.badDad')
 let yoda = document.querySelector('.jediGoblin')
 
-// saber percentages
+// saber percentages selectors
 
-let saber = document.querySelector('.beam')
-// let saberBeamers = document.querySelector('.beamers')
+let yodaSaber = document.querySelector('.beam-yoda')
+let vaderSaber = document.querySelector('.beam-vader')
 let vaderVote = 0
 let yodaVote = 0
 
@@ -19,17 +19,17 @@ let getVotes = function() {
         let yodaVoteSpan = document.querySelector('.yodaVotes')
         yodaVote = response.data.data.value
         yodaVoteSpan.innerHTML = yodaVote
-        yodaBar()
+        updateBars()
     })
     axios.get('http://circuslabs.net:3000/data/vader').then(function (response) {
         console.log('here is the response data for key:', response);
         let vaderVoteSpan = document.querySelector('.vaderVotes')
         vaderVote = response.data.data.value
         vaderVoteSpan.innerHTML = vaderVote
-        vaderBar()
+        updateBars()
        
     })
-  
+    
 
 }
 
@@ -39,22 +39,19 @@ setInterval(getVotes, 2000)
 
 
 
+
 // percentage bars
-let vaderBar = function(){
-    saber.style.width = vaderVote/ (yodaVote+vaderVote) *100 +'%'
-    if (vaderVote === yodaVote){
-        saber.style.width = '50%'
-    }
+
+let updateBars= function(){
+    vaderSaber.style.width = vaderVote/yodaVote *100 +'%'
+    // if (vaderVote === yodaVote){
+    //     vaderSaber.style.width = '50%'
+    // }
+    yodaSaber.style.wdith = yodaVote/vaderVote *100 + '%'
+    // if (yodaVote === vaderVote){
+    //     yodaSaber.style.width = '50%'
+    // }
 }
-
-let yodaBar = function(){
-    saber.style.wdith = yodaVote/ (vaderVote+yodaVote) *100 + '%'
-    if (yodaVote === vaderVote){
-        saber.style.width = '50%'
-    }
-}
-
-
 
 
 // clicks and votes
