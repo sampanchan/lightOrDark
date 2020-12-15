@@ -1,7 +1,129 @@
-body{
+
+
+
+/* BACKGROUND */
+body {
+    width: 100%;
+    height: 100%;
+    background: url(../stars.jpg);
+    overflow: hidden;
+    background: cover;
+    repeat:no-repeat; 
+
+  }
+  
+  .fade {
+    position: relative;
+    width: 100%;
+    min-height: 60vh;
+    top: 5px;
+    /* background-image: linear-gradient(0deg, transparent, black 75%); */
+    z-index: 1;
+  }
+  
+  .star-wars {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 800px;
+    color: #feda4a;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 500%;
+    font-weight: 600;
+    letter-spacing: 6px;
+    line-height: 150%;
+    perspective: 600px;
+    text-align: justify;
+  }
+  
+  .crawl {
+    position: relative;
+    top: 99999px;
+    transform-origin: 50% 100%;
+    animation: crawl 60s ease-in-out;
+  }
+  
+  .crawl > .title {
+    font-size: 90%;
+    text-align: center;
+  }
+  
+  .crawl > .title h1 {
+    margin: 0 0 100px;
+    text-transform: uppercase;
+  }
+  
+  @keyframes crawl {
+    0% {
+      top: -100px;
+      transform: rotateX(20deg)  translateZ(0);
+    }
+    100% { 
+      top: -6000px;
+      transform: rotateX(25deg) translateZ(-2500px);
+    }
+  }
+
+/* SABERS */
+.beamers img{
+    /* width: 200px; */
+    height: auto;
+    width: 50%;
+}
+.center-saber{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.vader-saber{
+    display: flex;
+    align-items: center;
+    width:400px;
+}
+.yoda-saber{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    width: 400px;
+}
+.beam{
+    border-radius: 50px;
+    /* width: 100%; */
+    height: 10px;
+}
+.vader{
+    background-color: red;
+    box-shadow: 
+    0 0 77px 26px #fff, 
+    0 0 15px 11px rgb(163, 71, 71), 
+    0 0 1px -4px rgb(107, 107, 107)
+}
+.yoda{
+    background-color: green;
+    box-shadow: 
+    0 0 77px 26px #fff, 
+    0 0 15px 11px rgb(45, 163, 104), 
+    0 0 1px -4px rgb(93, 126, 107)
+}
+
+
+
+
+
+
+
+
+
+
+  /*JS ACTIVITY  */
+
+  body{
     font-family: 'Lato', sans-serif;
     text-align: center;
     font-weight: bold;
+    background-color: black;
+    color: yellow;
 }
 h1{
  padding: 15px;
@@ -14,6 +136,7 @@ h2{
 img{
     width: 150px;
     height: 200px;
+    
 }
 .star-images img{
     border: 2px solid transparent;    
@@ -23,4 +146,15 @@ img{
 }
 .first-war{
     margin-right: 100px
+}
+.vaderVotes{
+    font-size: 15px;
+}
+.glow{
+    background-color: rgb(241, 77, 77);
+    box-shadow:
+    0 0 60px 30px #fff,  
+    0 0 100px 60px rgb(163, 71, 71),
+    0 0 140px 90px rgb(107, 107, 107);
+    border-radius: 50px;
 }
